@@ -5,4 +5,6 @@ mkdir -p $SUBJECTS_DIR
 
 echo $SUBJECTS_DIR
 
-recon-all -i IXI169-Guys-0842-T1.nii -s IXI169 -all
+# recon-all -i IXI169-Guys-0842-T1.nii -s IXI169 -all
+mri_synthstrip -i IXI169-Guys-0842-T1.nii -o IXI169_brain.nii.gz
+mri_convert --stats IXI169_brain.nii.gz
